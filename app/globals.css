@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 1. إعدادات الألوان الأساسية */
+:root {
+  --gold: #D4AF37;
+}
+
+/* 2. ضمان أن النصوص في الموقع كله بيضاء */
+body {
+  color: white;
+}
+
+/* تعديل جذري للخانات لتكون بيضاء والنص أسود */
+input, select, textarea {
+  color: black !important;       /* لون النص أسود إجباري */
+  background-color: white !important; /* خلفية بيضاء */
+  border: 1px solid #ccc;        /* حدود رمادية ناعمة */
+}
+
+/* تحسين شكل القائمة المنسدلة */
+select option {
+  background-color: white;
+  color: black;
+}
+
+/* 4. إبقاء الخيارات الداخلية للقائمة بالأسود لتكون واضحة */
+select option {
+  color: black;
+  background-color: white;
+}
+
+/* 5. فئات الألوان الذهبية */
+.text-gold {
+  color: var(--gold);
+}
+.bg-gold {
+  background-color: var(--gold);
+}
+.border-gold {
+  border-color: var(--gold);
+}
+
+/* 6. تأثير ظهور العناصر (Fade In Animation) */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
