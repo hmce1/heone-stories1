@@ -1,6 +1,7 @@
-@tailwind base;
-@tailwind components;
+@import "tailwindcss";
+
 @tailwind utilities;
+/* @tailwind base; */
 
 /* 1. إعدادات الألوان الأساسية */
 :root {

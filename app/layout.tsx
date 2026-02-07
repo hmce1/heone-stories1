@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { Cairo } from "next/font/google"; // استدعاء خط عربي
+import { Cairo, Inter } from "next/font/google"; // استدعاء خط عربي
 import "./globals.css";
+
+const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
 const cairo = Cairo({ subsets: ["arabic"] });
 
@@ -15,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ar" dir="rtl">
+    <html lang="ar" dir="rtl" className={inter.variable}>
       <body className={`${cairo.className} bg-[url('/background.jpg')] bg-cover bg-center bg-fixed min-h-screen text-white`}>
         {children}
       </body>

@@ -50,7 +50,7 @@ export default function Home() {
                 <select 
                 value={selectedCountry}
                 onChange={(e) => setSelectedCountry(e.target.value)}
-                className="w-full py-3 px-6 rounded-full bg-gradient-to-r from-yellow-600 via-yellow-300 to-yellow-600 text-black font-bold text-xl shadow-lg appearance-none text-center cursor-pointer hover:scale-105 transition-transform focus:outline-none ring-2 ring-yellow-400/50"
+                className="w-full py-3 px-6 rounded-full bg-gradient-to-r from-yellow-600 via-yellow-300 to-yellow-600 text-black font-bold text-xl shadow-lg appearance-none text-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-yellow-400/50 focus:scale-100"
                 >
                 <option value="" disabled className="bg-white text-gray-500">اختر الدولة</option>
                 {arabCountries.map((country) => (
