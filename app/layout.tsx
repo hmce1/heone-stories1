@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cairo, Inter } from "next/font/google"; // استدعاء خط عربي
+import { Providers } from "@/components/providers";
 import "./globals.css";
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'});
@@ -19,7 +20,9 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" className={inter.variable}>
       <body className={`${cairo.className} bg-[url('/background.jpg')] bg-cover bg-center bg-fixed min-h-screen text-white`}>
-        {children}
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );
